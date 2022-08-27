@@ -38,6 +38,8 @@ router.get('/:id', (req, res) => {
   })
 });
 
+
+//comeback with find or create
 router.post('/', (req, res) => {
   //check in a category with this name already exists
   const categoryTitle = req.body.category_name.charAt(0).toUpperCase() + req.body.category_name.slice(1).toLowerCase();
