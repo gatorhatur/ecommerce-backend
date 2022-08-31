@@ -101,7 +101,7 @@ router.put('/:id', (req, res) => {
             res.status(404).json({ message: "No category exists with this id!" })
             return;
           }
-        res.status(200).json({ message: "The category name has been successfully updated" });
+        res.json({ message: "The category name has been successfully updated" });
       })
     })
     .catch(err => {
@@ -111,6 +111,8 @@ router.put('/:id', (req, res) => {
   
   //res.json({ message: categoryTitle });
 });
+
+
 
 router.delete('/:id', (req, res) => {
   Category.destroy({
